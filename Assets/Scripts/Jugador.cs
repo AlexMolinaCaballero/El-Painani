@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     public float fuerzaSalto;
+    public GameManager gameManager;
 
     private bool saltando = false;
     private Rigidbody2D rigidbody2D;
@@ -33,6 +34,11 @@ public class Jugador : MonoBehaviour
         {
             animator.SetBool("estaSaltando", false);
             saltando = false;
+        }
+
+        if(collision.gameObject.tag == "Obstaculo")
+        {
+            gameManager.gameOver = true;
         }
     }
 }
