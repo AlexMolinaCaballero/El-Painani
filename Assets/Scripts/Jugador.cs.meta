@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: a9609dbbc22cc6f4a87df5ecbe21d735
+guid: 08e843c1fee412947a0f160ba6b86dd0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - fondo: {instanceID: 0}
-  - columna: {fileID: 2243745247146904835, guid: 4750cb76065ed2f4896ece392feac4e7, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
