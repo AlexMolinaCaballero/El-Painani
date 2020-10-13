@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         {
             if(columnas[i].transform.position.x <= -10)
             {
-                columnas[i].transform.position = new Vector3(columnas[columnas.Count - 1].transform.position.x + 1 + i, -4, 0);
+                columnas[i].transform.position = new Vector3(columnas[columnas.Count - 1].transform.position.x + 1 + i, -3, 0);
             }
             columnas[i].transform.position = columnas[i].transform.position + new Vector3(-1, 0, 0) * Time.deltaTime * velocidad;
         }

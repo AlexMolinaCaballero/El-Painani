@@ -5,6 +5,8 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     public float fuerzaSalto;
+
+    private bool saltando = false;
     private Rigidbody2D rigidbody2D;
     private Animator animator;
     // Start is called before the first frame update
@@ -17,10 +19,11 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && saltando == false)
         {
             animator.SetBool("estaSaltando",true);
             rigidbody2D.AddForce(new Vector2(0,fuerzaSalto));
+            saltando = true;
         }
     }
 
@@ -29,6 +32,7 @@ public class Jugador : MonoBehaviour
         if(collision.gameObject.tag == "Suelo")
         {
             animator.SetBool("estaSaltando", false);
+            saltando = false;
         }
     }
 }
